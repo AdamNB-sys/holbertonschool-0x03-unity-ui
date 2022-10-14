@@ -3849,6 +3849,7 @@ MonoBehaviour:
   rb: {fileID: 877938646}
   health: 5
   scoreText: {fileID: 583574899}
+  healthText: {fileID: 847352057}
 --- !u!1001 &887714942
 PrefabInstance:
   m_ObjectHideFlags: 0

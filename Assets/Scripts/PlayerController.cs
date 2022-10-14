@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private int score = 0;
     public int health = 5;
     public Text scoreText;
+    public Text healthText;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -41,7 +42,8 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Trap")
         {
             health -= 1;
-            Debug.Log($"Health: {health}");
+            SetHealthText();
+            // Debug.Log($"Health: {health}");
         }
 
         // Win condition
@@ -67,5 +69,11 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = $"Score: {score}";
+    }
+
+    // Sets health in UI
+    void SetHealthText()
+    {
+        healthText.text = $"Health: {health}";
     }
 }
