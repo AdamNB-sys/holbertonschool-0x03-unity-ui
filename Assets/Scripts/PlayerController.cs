@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public int health = 5;
     public Text scoreText;
     public Text healthText;
+    public Text gameOverText;
+    public Image gameOverBG;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -49,7 +51,11 @@ public class PlayerController : MonoBehaviour
         // Win condition
         if (other.tag == "Goal")
         {
-            Debug.Log("You win!");
+            // Debug.Log("You win!");
+            gameOverText.text = "You Win!";
+            gameOverText.color = Color.black;
+            gameOverBG.color = Color.green;
+            gameOverBG.gameObject.SetActive(true);
         }
     }
 
