@@ -75,6 +75,10 @@ public class PlayerController : MonoBehaviour
             // SceneManager.LoadScene("maze");
             StartCoroutine(LoadScene(3));
         }
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene("menu");
+        }
     }
 
     // Adds pause after Game Over/Win message is displayed and game is reset
