@@ -3851,6 +3851,8 @@ MonoBehaviour:
   health: 5
   scoreText: {fileID: 583574899}
   healthText: {fileID: 847352057}
+  gameOverText: {fileID: 1325272582}
+  gameOverBG: {fileID: 1843496884}
 --- !u!1001 &887714942
 PrefabInstance:
   m_ObjectHideFlags: 0
