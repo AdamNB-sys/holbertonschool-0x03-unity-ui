@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             score += 1;
+            SetScoreText();
             // Debug.Log($"Score: {score}");
         }
 
