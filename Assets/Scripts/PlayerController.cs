@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
             gameOverText.color = Color.black;
             gameOverBG.color = Color.green;
             gameOverBG.gameObject.SetActive(true);
+            StartCoroutine(LoadScene(3));
         }
     }
 
@@ -64,11 +65,23 @@ public class PlayerController : MonoBehaviour
     {
         if (health == 0)
         {
-            Debug.Log("Game Over!");
+            // Debug.Log("Game Over!");
             health = 5;
             score = 0;
-            SceneManager.LoadScene("maze");
+            gameOverText.text = "Game Over!";
+            gameOverText.color = Color.white;
+            gameOverBG.color = Color.red;
+            gameOverBG.gameObject.SetActive(true);
+            // SceneManager.LoadScene("maze");
+            StartCoroutine(LoadScene(3));
         }
+    }
+
+    // Adds pause after Game Over/Win message is displayed and game is reset
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("maze");
     }
 
     // Sets score in UI
